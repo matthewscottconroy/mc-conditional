@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Mc-Conditional Examples</title>
 	</head>
 	<body>
 		<mc-conditional>
