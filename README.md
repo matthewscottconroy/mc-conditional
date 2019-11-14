@@ -13,102 +13,102 @@ To use the component, simply wrap any of your standard form elements with the `<
 
 `
 <pre>
-<mc-conditional>
-<div>
-<input type="radio" id="jalapeno-radio" name="pepper" value="jalapeno">
-<label for="jalapeno-radio">Jalapeno</label>
-</div>
-<div>
-<input type="radio" id="ghost-radio" name="pepper" value="ghost">
-<label for="ghost-radio">Ghost</label>
-</div>
-<div>
-<input type="radio" id="habanero-radio" name="pepper" value="habanero">
-<label for="habanero-radio">Habanero</label>
-</div>
-</mc-conditional>
+&lt;mc-conditional&gt;
+&lt;div&gt;
+&lt;input type="radio" id="jalapeno-radio" name="pepper" value="jalapeno"&gt;
+&lt;label for="jalapeno-radio"&gt;Jalapeno&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;input type="radio" id="ghost-radio" name="pepper" value="ghost"&gt;
+&lt;label for="ghost-radio"&gt;Ghost&lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;input type="radio" id="habanero-radio" name="pepper" value="habanero"&gt;
+&lt;label for="habanero-radio"&gt;Habanero&lt;/label&gt;
+&lt;/div&gt;
+&lt;/mc-conditional&gt;
 
-<div id="jalapeno">
+&lt;div id="jalapeno"&gt;
 These green peppers are delicious and spicy!
-</div>
-<div id="ghost">
+&lt;/div&gt;
+&lt;div id="ghost"&gt;
 These red peppers are to die for!
-</div>
-<div id="habanero">
+&lt;/div&gt;
+&lt;div id="habanero"&gt;
 These orange peppers are quite the dish!
-</div>
+&lt;/div&gt;
 
-<mc-conditional> <!-- c-value="parrot" visible-element=".form-controls"> -->
-<select name="pets" id="pet-select">
-    <option value=""> Please choose an option </option>
-    <option value="dog">Dog</option>
-    <option value="cat">Cat</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
-</select>
-</mc-conditional>
+&lt;mc-conditional&gt; &lt;!-- c-value="parrot" visible-element=".form-controls"&gt; --&gt;
+&lt;select name="pets" id="pet-select"&gt;
+    &lt;option value=""&gt; Please choose an option &lt;/option&gt;
+    &lt;option value="dog"&gt;Dog&lt;/option&gt;
+    &lt;option value="cat"&gt;Cat&lt;/option&gt;
+    &lt;option value="hamster"&gt;Hamster&lt;/option&gt;
+    &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+    &lt;option value="spider"&gt;Spider&lt;/option&gt;
+    &lt;option value="goldfish"&gt;Goldfish&lt;/option&gt;
+&lt;/select&gt;
+&lt;/mc-conditional&gt;
 
-<div id="dog">
+&lt;div id="dog"&gt;
 barks
-</div>
+&lt;/div&gt;
 
-<div id="cat">
+&lt;div id="cat"&gt;
 meows
-</div>
+&lt;/div&gt;
 
-<div id="hamster">
+&lt;div id="hamster"&gt;
 ...
-</div>
+&lt;/div&gt;
 
-<div id="parrot">
+&lt;div id="parrot"&gt;
 flies
-</div>
+&lt;/div&gt;
 
-<div id="spider">
+&lt;div id="spider"&gt;
 scuttles
-</div>
+&lt;/div&gt;
 
-<div id="goldfish">
+&lt;div id="goldfish"&gt;
 swims
-</div>
+&lt;/div&gt;
 
 
 
 
 
-<mc-conditional>
-  <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-  <input type="checkbox" name="vehicle" value="Car"> I have a car<br>
-  <input type="checkbox" name="vehicle" value="Boat" checked> I have a boat<br>
-</mc-conditional>
+&lt;mc-conditional&gt;
+  &lt;input type="checkbox" name="vehicle" value="Bike"&gt; I have a bike&lt;br&gt;
+  &lt;input type="checkbox" name="vehicle" value="Car"&gt; I have a car&lt;br&gt;
+  &lt;input type="checkbox" name="vehicle" value="Boat" checked&gt; I have a boat&lt;br&gt;
+&lt;/mc-conditional&gt;
 
 
-<div id="Bike">
+&lt;div id="Bike"&gt;
 This is the bike div! spin spin
-</div>
+&lt;/div&gt;
 
-<div id="Car">
+&lt;div id="Car"&gt;
 This is the car div! Vroooom!
-</div>
+&lt;/div&gt;
 
-<div id="Boat">
+&lt;div id="Boat"&gt;
 This is the boat div! Blup! Blup!
-</div>
+&lt;/div&gt;
 
 
 
 
-<p>Just type the word abracadabra</p>
+&lt;p&gt;Just type the word abracadabra&lt;/p&gt;
 
-<mc-conditional>
-<input type="text" name="magic-word">
-</mc-conditional>
+&lt;mc-conditional&gt;
+&lt;input type="text" name="magic-word"&gt;
+&lt;/mc-conditional&gt;
 
-<div id="abracadabra" class="mc-conditional-out">
+&lt;div id="abracadabra" class="mc-conditional-out"&gt;
         You said the magic word!
-</div>
+&lt;/div&gt;
 </pre>
 `
 
