@@ -1,4 +1,4 @@
-#mc-conditional
+# mc-conditional
 
 mc-conditional is a web component that augments the behavior of traditional html form elements so that when certain values are chosen or entered into the form the visibility of certain elements are the page can be altered.
 
