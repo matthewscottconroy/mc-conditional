@@ -12,6 +12,7 @@ You might find this web component useful if:
 To use the component, simply wrap any of your standard form elements with the `<mc-conditional>` tag like so:
 
 `
+<pre>
 <mc-conditional>
 <div>
 <input type="radio" id="jalapeno-radio" name="pepper" value="jalapeno">
@@ -108,7 +109,7 @@ This is the boat div! Blup! Blup!
 <div id="abracadabra" class="mc-conditional-out">
         You said the magic word!
 </div>
-
+</pre>
 `
 
 Notice that some of the conditionals have some attributes commented out. You can use these custom attributes to provide some additional customization to the behavior of your elements (by for instance explicitly stating which values should alter visibility (`c-value`) and which html elements your component should target the visibility of (`visible-element`).)
