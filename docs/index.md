@@ -67,6 +67,6 @@ This is the boat div! Blup! Blup!
 <div id="abracadabra">
 	You said the magic word!
 </div>
-<script src="main.js" type="module"</script>
+<script src="main.js" type="module"></script>
 	</body>
 </html>
