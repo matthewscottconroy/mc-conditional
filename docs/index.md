@@ -2,6 +2,11 @@
 	<head>
 	</head>
 	<body>
+<header>
+<h1> Examples </h1>
+<p> This page showcases how wrapping any standard form component in the mc-conditional> tag automatically gives it the ability to hide and show page elements. There are various extra attributes you can use to tailor their behavvior to your needs. Consult the documentation for more info!</p>
+</header>
+<main>
 		<mc-conditional>
                                 <div>
                                         <input type="radio" id="jalapeno-radio" name="pepper" value="jalapeno">
@@ -71,12 +76,15 @@ This is the car div! Vroooom!
 <div id="Boat">
 This is the boat div! Blup! Blup! 
 </div>
+
+<p>Just type the word abracadabra</p>
 <mc-conditional>
 	<input type="text" name="magic-word">
 </mc-conditional>
 <div id="abracadabra" class="mc-conditional-out">
 	You said the magic word!
 </div>
+</main>
 <script src="main.js" type="module"></script>
 	</body>
 </html>
