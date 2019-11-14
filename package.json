@@ -1,0 +1,38 @@
+{
+  "name": "mc-conditional",
+  "version": "1.0.0",
+  "description": "A web component that helps you toggle the visibility of html document elements based on the values a user enters into a form element.",
+  "browser": "McConditional.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewscottconroy/mc-conditional.git"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "browser",
+    "html",
+    "form",
+    "input",
+    "select",
+    "text",
+    "radio",
+    "checkbox",
+    "custom",
+    "element",
+    "shadow",
+    "dom"
+  ],
+  "author": "Matthew Scott Conroy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewscottconroy/mc-conditional/issues"
+  },
+  "homepage": "https://github.com/matthewscottconroy/mc-conditional#readme"
+}
