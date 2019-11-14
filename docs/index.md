@@ -4,7 +4,7 @@
 	<body>
 <header>
 <h1> Examples </h1>
-<p> This page showcases how wrapping any standard form component in the mc-conditional> tag automatically gives it the ability to hide and show page elements. There are various extra attributes you can use to tailor their behavvior to your needs. Consult the documentation for more info!</p>
+<p> This page showcases how wrapping any standard form component in the mc-conditional> tag automatically gives it the ability to hide and show page elements. There are various extra attributes you can use to tailor their behavior to your needs. Consult the documentation for more info!</p>
 </header>
 <main>
 		<mc-conditional>
