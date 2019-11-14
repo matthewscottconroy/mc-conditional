@@ -16,6 +16,16 @@
                                         <label for="habanero-radio">Habanero</label>
                                 </div>
                         </mc-conditional>
+			<div id="jalapeno">
+				These green peppers are delicious and spicy!
+			</div>
+			<div id="ghost">
+				These red peppers are to die for!
+			</div>
+			<div id="habanero">
+				These orange peppers are quite the dish!
+			</div>
+			
 			<mc-conditional> <!-- c-value="parrot" visible-element=".form-controls"> -->
 <select name="pets" id="pet-select">
     <option value=""> Please choose an option </option>
