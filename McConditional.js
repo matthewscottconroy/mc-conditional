@@ -235,14 +235,12 @@ class McConditional extends HTMLElement {
 
 	_setConditionalVisibility(){
 		//if the new conditional value is equal to the current value...
-			if(this.currentValue === this.cValue){
+		if(this.currentValue === this.cValue){
 				//make the visibles visible 
 		  	this.visibles.forEach(v => {
 							if(v !== null){
 								if(!this.hasAttribute('visible-element')){
-									if(false){ //TODO: replace with: (this.type === 'select-multiple'){
-										//possible bug for this one
-									} else if(this.type === 'checkbox' || this.type === 'select-multiple'){
+									if(this.type === 'checkbox' || this.type === 'select-multiple'){
 										let arr = this.cValue.split('&');
 										if(arr.includes(v.id)){
 											v.classList.remove("mc-conditional-out");
@@ -266,7 +264,7 @@ class McConditional extends HTMLElement {
 								i.required = true;
 							}
 					});
-			}
+		}
 	}
 
 
