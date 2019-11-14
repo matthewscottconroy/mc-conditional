@@ -61,6 +61,7 @@ swims
                                 <input type="checkbox" name="vehicle" value="Boat" checked> I have a boat<br>
 
 </mc-conditional>
+<br>
 <div id="Bike">
 This is the bike div! spin spin
 </div>
@@ -73,7 +74,7 @@ This is the boat div! Blup! Blup!
 <mc-conditional>
 	<input type="text" name="magic-word">
 </mc-conditional>
-<div id="abracadabra">
+<div id="abracadabra" class="mc-conditional-out">
 	You said the magic word!
 </div>
 <script src="main.js" type="module"></script>
