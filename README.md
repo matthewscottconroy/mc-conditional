@@ -1,5 +1,7 @@
 # mc-conditional
 
+[mc-conditional in action](https://matthewscottconroy.github.io/mc-conditional/) 
+
 mc-conditional is a web component that augments the behavior of traditional html form elements so that when certain values are chosen or entered into the form, the visibility of certain elements of the page are altered.
 
 You might find this web component useful if:
@@ -8,6 +10,19 @@ You might find this web component useful if:
 - You want to display certain messages based on the way a user has filled out a form
 - Your page consists of a sequence of slides, tabs or branching paths that you want to display without having to transition to other pages or without having to build out a single page application
 - You want a simple way of managing conditional visibility for situations where the added complexity or technical debt of using a framework with mvc or reactive components isn't warranted
+
+
+## To Install
+
+Run:
+
+`npm install mc-conditional`
+
+Then include the file in your html:
+<script src="./node_modules/mc-conditional/McConditional.js" type="module"></script>
+
+
+## To Use
 
 To use the component, simply wrap any of your standard form elements with the `<mc-conditional>` tag like so:
 
