@@ -14,29 +14,29 @@ class McConditional extends HTMLElement {
   /*Event Hooks/////////////////////////////////////////////////////////*/
 
   constructor() {
-    super();
-
-    const shadow = this.attachShadow({ mode: "open" });
-
-    shadow.appendChild(style.cloneNode(true));
-    shadow.appendChild(template.content.cloneNode(true));
-
-		this.inputs;		//the input element(s) whose value(s) determine(s) visibility
-		this.visibles;	//the node(s) that is(are) made visible or invisible
-		this.vRoot; //the node from which to begin looking for conditionally visible nodes	
-		
-		this._setVroot();
-		this._setInputs();
-		this._setVisibles();
+	  super();
+    
+	  const shadow = this.attachShadow({ mode: "open" });
+	  
+	  shadow.appendChild(style.cloneNode(true));
+	  shadow.appendChild(template.content.cloneNode(true));
 	
-		//users set c-required on visible-element and descendents
-		this._clearConditionalVisibility();
-		this._setConditionalVisibility();
-
+	  this.inputs;		//the input element(s) whose value(s) determine(s) visibility
+	  this.visibles;	//the node(s) that is(are) made visible or invisible
 		
-		//add an onChange event to inputs that toggles visibility based on currentvalue
-		this._setOnChanges();
-    console.log(this);
+	  this.vRoot; //the node from which to begin looking for conditionally visible nodes	
+		
+	  this._setVroot();
+	  this._setInputs();	
+	  this._setVisibles();
+		
+	  //users set c-required on visible-element and descendents	
+	  this._clearConditionalVisibility();
+	  this._setConditionalVisibility();
+
+	
+	  //add an onChange event to inputs that toggles visibility based on currentvalue
+	  this._setOnChanges();
   }
 
 
@@ -297,7 +297,6 @@ class McConditional extends HTMLElement {
 
 
 	_onChange(){
-		console.log("on change fired");
 		if(!this.hasAttribute('visible-element') && (this.type !== "button" && 
 								 this.type !== "checkbox" && 
 								 this.type !== "radio" && 
@@ -315,32 +314,32 @@ class McConditional extends HTMLElement {
 		let arr;
 
 		Array.from(mc).forEach(c => {
-		switch(c.type){
- 	      		case 'radio':
-  	       			arr = Array.from(c.inputs).filter(i => i.checked);
+			switch(c.type){
+ 		      		case 'radio':
+  	       				arr = Array.from(c.inputs).filter(i => i.checked);
  
-				if(arr.length > 0){
-      	     				arr[0].checked = false;
- 	        		}
-  	       			break;
+					if(arr.length > 0){
+      	     					arr[0].checked = false;
+ 	        			}
+  	       				break;
 
- 	     		case 'checkbox':
-        			Array.from(c.inputs).filter(i => i.checked).forEach(x => x.checked = false);
-        			break;
+	 	     		case 'checkbox':
+        				Array.from(c.inputs).filter(i => i.checked).forEach(x => x.checked = false);
+      		  			break;
 
-      			case 'select':
-        			c.inputs[0].options.forEach(o => o.selected = false);
-        			break;
+      				case 'select':
+        				c.inputs[0].options.forEach(o => o.selected = false);
+	        			break;
+	
+      				default:
+         				//treat as text
+         				c.inputs[0].value = "";
+         				break;
+      			}
 
-      			default:
-         			//treat as text
-         			c.inputs[0].value = "";
-         			break;
-      	}
-
-	c._updateConditionalVisibility(); //now that the input is cleared, update visibility
-	  });
-  }
+			c._updateConditionalVisibility(); //now that the input is cleared, update visibility
+	  	});
+  	}
 }
 
 window.customElements.define("mc-conditional", McConditional);
