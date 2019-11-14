@@ -189,11 +189,11 @@ class McConditional extends HTMLElement {
 	_clearConditionalVisibility(){
   	//make all visibles invisible based on cvalue before change
 		this.visibles.forEach(v => {
-														if(v !== null){
-															v.classList.remove("mc-conditional-in");
-															v.classList.add("mc-conditional-out");
-														}
-				 									});
+						if(v !== null){
+						v.classList.remove("mc-conditional-in");
+						v.classList.add("mc-conditional-out");
+					}
+				 });
 
 		//remove required from all c-required
 		this.inputs.forEach(i => i.required = false);
@@ -238,35 +238,34 @@ class McConditional extends HTMLElement {
 			if(this.currentValue === this.cValue){
 				//make the visibles visible 
 		  	this.visibles.forEach(v => {
-																			if(v !== null){
-																				if(!this.hasAttribute('visible-element')){
-																					if(false){ //TODO: replace with: (this.type === 'select-multiple'){
-																						//possible bug for this one
-																					} else if(this.type === 'checkbox' || this.type === 'select-multiple'){
-																						let arr = this.cValue.split('&');
-
-																						if(arr.includes(v.id)){
-																							v.classList.remove("mc-conditional-out");
-																							v.classList.add("mc-conditional-in");
-																						} 
-																					} else {//type equals radio, select-one, textarea, or text and its affiliates
-																						if("#" + v.id === this.vElement){
-																							v.classList.remove("mc-conditional-out");
-																							v.classList.add("mc-conditional-in"); 
-																						}
-																					}
-																				} else{ 																					
-																					v.classList.remove("mc-conditional-out");
-																					v.classList.add("mc-conditional-in"); 
-																				}
-																			}
-																	});
+							if(v !== null){
+								if(!this.hasAttribute('visible-element')){
+									if(false){ //TODO: replace with: (this.type === 'select-multiple'){
+										//possible bug for this one
+									} else if(this.type === 'checkbox' || this.type === 'select-multiple'){
+										let arr = this.cValue.split('&');
+										if(arr.includes(v.id)){
+											v.classList.remove("mc-conditional-out");
+											v.classList.add("mc-conditional-in");
+										} 
+									} else {//type equals radio, select-one, textarea, or text and its affiliates
+										if("#" + v.id === this.vElement){
+											v.classList.remove("mc-conditional-out");
+											v.classList.add("mc-conditional-in"); 
+										}
+									}
+								} else{ 																					
+									v.classList.remove("mc-conditional-out");
+									v.classList.add("mc-conditional-in"); 
+								}
+							}
+						});
 		 	 //tag all c-required inputs with required
-				this.inputs.forEach(i => {
-																		if(i.hasAttribute('c-required')){
-																			i.required = true;
-																		}
-														});
+			this.inputs.forEach(i => {
+							if(i.hasAttribute('c-required')){
+								i.required = true;
+							}
+					});
 			}
 	}
 
@@ -300,15 +299,15 @@ class McConditional extends HTMLElement {
 	_onChange(){
 		console.log("on change fired");
 		if(!this.hasAttribute('visible-element') && (this.type !== "button" && 
-																								 this.type !== "checkbox" && 
-																								 this.type !== "radio" && 
-																								 this.type !== 'select-one' &&
-																								 this.type !== 'select-multiple')){
+								 this.type !== "checkbox" && 
+								 this.type !== "radio" && 
+								 this.type !== 'select-one' &&
+								 this.type !== 'select-multiple')){
 			this._clearConditionalVisibility();
-      this._setVisibles();
+      			this._setVisibles();
 		}
  
-	  this._updateConditionalVisibility();
+	  	this._updateConditionalVisibility();
 	}
 
 
@@ -316,30 +315,30 @@ class McConditional extends HTMLElement {
 		let arr;
 
 		Array.from(mc).forEach(c => {
-	    switch(c.type){
- 	      case 'radio':
-  	       arr = Array.from(c.inputs).filter(i => i.checked);
+		switch(c.type){
+ 	      		case 'radio':
+  	       			arr = Array.from(c.inputs).filter(i => i.checked);
  
-    	     if(arr.length > 0){
-      	     arr[0].checked = false;
- 	        }
-  	       break;
+				if(arr.length > 0){
+      	     				arr[0].checked = false;
+ 	        		}
+  	       			break;
 
- 	     case 'checkbox':
-        Array.from(c.inputs).filter(i => i.checked).forEach(x => x.checked = false);
-        break;
+ 	     		case 'checkbox':
+        			Array.from(c.inputs).filter(i => i.checked).forEach(x => x.checked = false);
+        			break;
 
-      case 'select':
-        c.inputs[0].options.forEach(o => o.selected = false);
-        break;
+      			case 'select':
+        			c.inputs[0].options.forEach(o => o.selected = false);
+        			break;
 
-      default:
-         //treat as text
-         c.inputs[0].value = "";
-         break;
-      }
-				
-		  c._updateConditionalVisibility(); //now that the input is cleared, update visibility
+      			default:
+         			//treat as text
+         			c.inputs[0].value = "";
+         			break;
+      	}
+
+	c._updateConditionalVisibility(); //now that the input is cleared, update visibility
 	  });
   }
 }
