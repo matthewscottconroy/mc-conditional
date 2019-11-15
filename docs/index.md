@@ -4,6 +4,14 @@
 section{
   background-color:blue;
   margin: 10em;
+  padding: 10em;
+  border-radius: 5px;
+  color: white;
+}
+
+section > div {
+  margin: 10em;
+  padding: 10em;
 }
 
 
