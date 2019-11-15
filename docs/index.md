@@ -3,15 +3,15 @@
 <style>
 section{
   background-color:blue;
-  margin: 10em;
-  padding: 10em;
+  margin: 2em;
+  padding: 2em;
   border-radius: 5px;
   color: white;
 }
 
 section > div {
-  margin: 10em;
-  padding: 10em;
+  margin: 2em;
+  padding: 2em;
 }
 
 
