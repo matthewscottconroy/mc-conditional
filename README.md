@@ -19,7 +19,7 @@ Run:
 `npm install mc-conditional`
 
 Then include the file in your html:
-<script src="./node_modules/mc-conditional/McConditional.js" type="module"></script>
+&lt;script src="./node_modules/mc-conditional/McConditional.js" type="module"&gt;&lt;/script&gt;
 
 
 ## To Use
