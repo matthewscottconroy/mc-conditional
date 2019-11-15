@@ -2,7 +2,7 @@
 
 [mc-conditional in action](https://matthewscottconroy.github.io/mc-conditional/) 
 
-mc-conditional is a web component that augments the behavior of traditional html form elements so that when certain values are chosen or entered into the form, the visibility of certain elements of the page are altered.
+mc-conditional is a web component that augments the behavior of traditional html form elements so that when certain values are chosen or entered into the form, the visibility of certain elements of the page is altered.
 
 You might find this web component useful if:
 
@@ -20,7 +20,7 @@ Run:
 
 Then include the file in your html:
 
-`&lt;script src="./node_modules/mc-conditional/McConditional.js" type="module"&gt;&lt;/script&gt;`
+`<script src="./node_modules/mc-conditional/McConditional.js" type="module"></script>`
 
 
 ## To Use
